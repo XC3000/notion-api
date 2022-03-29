@@ -13,7 +13,7 @@ const getAllQuestions = async (req, res, next) => {
   try {
     const questions = await Question.find({});
 
-    cachedData = results;
+    cachedData = questions;
     cacheTime = Date.now();
 
     return res.json({
